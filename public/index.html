@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Por uma WEB mais inteligente e conectada"
+    />
+    <title>Progmar Technologies</title>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>
+        Lamentamos, mas o site da Progmar não funciona corretamente sem
+        JavaScript habilitado. Ative-o para continuar.
+      </strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAXJXPVwvZW5NJy1A_7Yz6jD_rJOtmEoe0",
+        authDomain: "progmar-a8850.firebaseapp.com",
+        databaseURL: "https://progmar-a8850.firebaseio.com",
+        projectId: "progmar-a8850",
+        storageBucket: "progmar-a8850.appspot.com",
+        messagingSenderId: "859075339069",
+        appId: "1:859075339069:web:b707ed784584316c919b54",
+        measurementId: "G-3HDFMES36K",
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
